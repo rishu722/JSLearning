@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Literals</title>
+  </head>
+  <body>
+    <h1>Object Literals</h1>
+    <script>
+      let user = {
+        name: "Rishabh saxena",
+        age: 25,
+        city: "Bhopal",
+        email: "xyz@gmail.com",
+      };
+      console.log(user);
+      console.log(user.age); // 25
+
+      user.age = 30;
+      console.log(user.age);
+
+      console.log(user["city"]);
+
+      user["city"] = "bhopal";
+      console.log(user["city"]);
+    </script>
+  </body>
+</html>

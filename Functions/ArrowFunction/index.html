@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function</title>
+  </head>
+  <body>
+    <h1>Arrow function</h1>
+    <script>
+      const evenCheck = (num) => {
+        return num % 2 === 0;
+      };
+      const oddCheck = (num) => {
+        return num % 2 !== 0;
+      };
+      console.log(`given number ${evenCheck(5)}`);
+
+      const calcArea = (radius) => {
+        return 3.14 * radius ** 2;
+      };
+      const area = calcArea(15);
+      console.log(area);
+
+      const greet = () => "Hello, World";
+      const value = greet();
+      console.log(value);
+
+      const bill = (products, tax) => {
+        let total = 0;
+        for (let i = 0; i < products.length; i++) {
+          total += products[i] + products[i] * tax;
+        }
+        return total;
+      };
+
+      console.log(bill([10, 15, 30], 0.2));
+    </script>
+  </body>
+</html>

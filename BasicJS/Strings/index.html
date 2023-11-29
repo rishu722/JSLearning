@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Learning Strings</h2>
+    <script>
+      //Strings
+      console.log("Hello,JS Learning");
+
+      let title = "Leaning Js";
+      console.log(title);
+
+      //String concatenations
+
+      let fName = "Rishabh";
+      let lName = "Saxena";
+
+      let fullName = fName + ' ' + lName;
+      console.log(fullName);
+
+      //String Character fetching one by one
+      console.log(fullName[0]);
+
+      //String length
+     console.log(fullName.length);
+
+     //string methods
+     console.log(fullName.toUpperCase());
+     console.log(fullName.toLowerCase());
+
+     let index = title.indexOf("n");
+     console.log(index);
+
+     // common string methods 
+
+     let result = title.lastIndexOf();
+     console.log(result);
+
+     // slicing 
+    //  let sliceValue = title.slice(0,7); // for slicing out value from string
+    // let sliceValue = title.substr(1,7);
+      let sliceValue = title.replace('Leaning','React');   //For replacing  words
+     console.log(sliceValue);
+    </script>
+  </body>
+</html>

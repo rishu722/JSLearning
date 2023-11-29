@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Back function</title>
+  </head>
+  <body>
+    <h1>Call Back function</h1>
+    <p>
+      callback function is a function that is passed as an argument to another
+      function and is executed after the completion of a specific task. The
+      function that receives the callback is often asynchronous, meaning it
+      performs operations that might take some time, and once those operations
+      are completed, the callback function is invoked.
+    </p>
+    <script>
+      greet("Rishabh", callme);
+      function greet(name, callback) {
+        console.log(`Name of user:${name}`);
+        callback();
+      }
+      function callme() {
+        console.log(`Hello, Welcome  user`);
+      }
+
+      //   greet("Rishabh", callme);   // callback function with parameters
+      //   function greet(name, callback) {
+      //     console.log(`Name of user:${name}`);
+      //     callback(name);
+      //   }
+      //   function callme(name) {
+      //     console.log(`Hello, Welcome  ${name}`);
+      //   }
+    </script>
+  </body>
+</html>

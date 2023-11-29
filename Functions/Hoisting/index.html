@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoisting</title>
+  </head>
+  <body>
+    <h1>Hoisting</h1>
+    <p>
+      Hoisting is a behavior in JavaScript where variable and function
+      declarations are moved to the top of their containing scope during the
+      compilation phase. This means that you can use variables and functions
+      before they are declared in your code.
+    </p>
+    <script>
+      console.log(x); // undefined
+      var x = 5;
+      console.log(x); // 5
+
+      sayHello(); // Hello will print
+
+      function sayHello() {
+        console.log("Hello!");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else</title>
+  </head>
+  <body>
+    <h1>IF Else Statement</h1>
+    <p>
+      Use if to specify a block of code to be executed, if a specified condition
+      is true<br />
+      Use else to specify a block of code to be executed, if the same condition
+      is false<br />
+      Use else if to specify a new condition to test, if the first condition is
+      false
+    </p>
+    <p>
+      if (condition) { // block of code to be executed if the condition is true
+      } else { // block of code to be executed if the condition is false }
+    </p>
+    <script>
+      const age = 55;
+      if (age > 18) {
+        console.log(`Welcome ,You are 18+`);
+      } else {
+        console.log(`You are not 18+`);
+      }
+
+      let password = "pass";
+      if (password.length >= 7) {
+        console.log("Your Password is strong");
+      } else {
+        console.log("Your Password is Poor");
+      }
+
+      let mailId = "xyz@gmail.com";
+      if (mailId.includes("@") && mailId.includes(".com")) {
+        console.log("User Email is Correct");
+      } else if (mailId.includes("@")) {
+        console.log("User Email is partially correct");
+      } else {
+        console.log("User Email is InCorrect");
+      }
+    </script>
+  </body>
+</html>

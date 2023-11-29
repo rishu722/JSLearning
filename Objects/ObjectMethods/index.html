@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Methods</title>
+  </head>
+  <body>
+    <h1>Object Methods</h1>
+    <script>
+      let user = {
+        name: "Rishabh saxena",
+        age: 25,
+        city: "Bhopal",
+        email: "xyz@gmail.com",
+        loggedIn: function () {
+          //   this.name;
+          console.log(`Welcome user logged in ${this.name}`);
+        },
+      };
+      console.log(user.loggedIn());
+
+let arr = [10,25, 50,40,60,70,80];
+      const total = 100.98;
+      console.log(Math.round(total));
+      console.log(Math.sqrt(16));
+      console.log(Math.min(arr));
+    </script>
+  </body>
+</html>
