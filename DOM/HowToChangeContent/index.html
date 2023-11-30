@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to change Content</title>
+  </head>
+  <body>
+    <h1>How to change Content</h1>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sunt ab
+        natus expedita, ipsum, amet excepturi ipsam earum neque dignissimos, qui
+        repudiandae quidem doloremque quo labore iusto cupiditate! Omnis, quam?
+      </p>
+    </div>
+    <script>
+      // const para = document.querySelector("p");
+      // console.log(para.innerText);
+
+      // para.innerText = "Hello World";
+      // console.log(para.innerText);
+
+      // const paras = document.querySelectorAll("p");
+
+      // paras.forEach((para) => {
+      //   console.log(para.innerText);
+      //   p.innerText += "New text..";
+      // });
+
+      const content = document.querySelector(".content");
+      // content.innerHTML = "<h1>This is new Replaced Text</h1>";
+
+      const peoples = ["Peter", "Matt", "Harry", " Jerry"];
+      peoples.forEach((person) => {
+        content.innerHTML += `<p>${person}</p>`;
+      });
+    </script>
+  </body>
+</html>

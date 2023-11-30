@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How To Change Class</title>
+    <style>
+      .error {
+        background-color: crimson;
+        border: 1px solid crimson;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .success {
+        background-color: lightgreen;
+        border: 1px solid lightgreen;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How To Change Class</h1>
+    <p>This is error text para</p>
+    <p>This is error text para</p>
+    <p>This is success text para</p>
+    <p>This is text para</p>
+    <p>This is text para error</p>
+    <p>This is error text para</p>
+
+    <script>
+      const content = document.querySelector("p");
+      console.log(content.classList);
+      content.classList.add("error");
+      content.classList.remove("error");
+      content.classList.add("success");
+
+      const paras = document.querySelectorAll("p");
+
+      paras.forEach((p) => {
+        if (p.textContent.includes("error")) {
+          p.classList.add("error");
+        }
+        if (p.innerText.includes("success")) {
+          p.classList.add("success");
+        }
+      });
+    </script>
+  </body>
+</html>

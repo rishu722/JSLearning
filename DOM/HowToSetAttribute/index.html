@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Set attribute</title>
+    <style>
+      .error{
+        background-color: crimson;
+        border: 1px solid crimson;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .success{
+        background-color: lightgreen;
+        border: 1px solid lightgreen;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How to Set attribute</h1>
+
+    <p style="color: orange">This text having orange color</p>
+    <p class="error"> This is error text para</p>
+    <script>
+      const title = document.querySelector("h1");
+      title.setAttribute(
+        "style",
+        "Color:#000; font-size:20px;line-height:30px;"
+      );
+      const para = document.querySelector("p");
+      // para.setAttribute("style", "margin:50px;");  when we do this override the color css so this is not proper manner to use it.
+
+      console.log(para.style);
+      para.style.margin = "50px"; // THis is the proper solution to add style in exiting css
+      console.log(para);
+     // para.style.margin = "50px";  To remove exiting CSS;
+    </script>
+  </body>
+</html>
