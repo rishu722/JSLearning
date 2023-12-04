@@ -26,9 +26,11 @@ function addTask() {
     return;
   }
 
-  var newTask = document.createElement("li");
+  let newTask = document.createElement("li");
   newTask.innerHTML = `
         <span>${taskInput.value}</span>
+        <button class="edit">Edit</button>
+        <button type="submit" id="end-editing">Done</button>
         <button onclick="removeTask(this)">Remove</button>
     `;
 
@@ -42,3 +44,20 @@ function removeTask(button) {
   let taskList = taskToRemove.parentNode;
   taskList.removeChild(taskToRemove);
 }
+// function editTask(button) {
+//   let taskToEdit = button.parentNode;
+//   let taskEdit = taskToRemove.parentNode;
+//   taskEdit.
+// }
+const paragraph = document.querySelector("span");
+const edit_button = document.querySelector(".edit");
+// const end_button = document.getElementById("end-editing");
+
+edit_button.addEventListener("click", function () {
+  paragraph.contentEditable = true;
+  paragraph.style.backgroundColor = "#dddbdb";
+});
+
+end_button.addEventListener("click", function () {
+  paragraph.contentEditable = false;
+});
