@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Practice 4</title>
+  </head>
+  <body>
+    <img src="example.jpg" oncontextmenu="showImageSource(event)" />
+
+    <script>
+      function showImageSource(event) {
+        event.preventDefault();
+        alert("Image source: " + event.target.src);
+      }
+    </script>
+  </body>
+</html>

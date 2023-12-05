@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Practice 3</title>
+  </head>
+  <body>
+    <ul onclick="changeColor(event)">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos distinctio
+        ipsam ullam quaerat quae perspiciatis, esse accusantium iste ipsum error
+        commodi, sint inventore repellat quas ducimus. Totam nam optio eius?
+      </p>
+    </ul>
+
+    <script>
+      function changeColor(event) {
+        if (event.target.tagName === "LI") {
+          event.target.style.backgroundColor = "red";
+        } else {
+          event.target.style.backgroundColor = "#4c4c4c";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Practice 7</title>
+  </head>
+  <body>
+    <div
+      onmouseover="changeText('Mouse over me!')"
+      onmouseout="changeText('Mouse out')"
+    >
+      Mouse out
+    </div>
+
+    <script>
+      function changeText(text) {
+        document.querySelector("div").textContent = text;
+      }
+    </script>
+  </body>
+</html>
