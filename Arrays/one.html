@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Practice</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <script>
+      function sumArrayElements(arr) {
+        return arr.reduce((sum, current) => sum + current, 0);
+      }
+
+      let numbers = [1, 2, 3, 4, 5];
+      console.log("Sum:", sumArrayElements(numbers));
+    </script>
+  </body>
+</html>

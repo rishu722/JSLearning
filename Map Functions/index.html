@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map functions</title>
+  </head>
+  <body>
+    <h1>Map functions</h1>
+    <ul>
+      <li>
+        map() creates a new array from calling a function for every array
+        element.
+      </li>
+      <li>map() does not execute the function for empty elements.</li>
+      <li>map() does not change the original array.</li>
+    </ul>
+    <p>
+      const newArray = array.map(function(currentValue, index, array) { //
+      return result based on currentValue });
+    </p>
+    <ul>
+      <li>currentValue: The current element being processed in the array.</li>
+      <li>index: The index of the current element being processed.</li>
+      <li>array: The array map() was called upon.</li>
+    </ul>
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+
+      const doubledNumbers = numbers.map(function (number) {
+        return number * 2;
+      });
+
+      console.log(doubledNumbers);
+
+      const names = [
+        {
+          firstName: "Rishabh",
+          lastName: "Saxena",
+        },
+        {
+          firstName: "Shubham",
+          lastName: "Nema",
+        },
+        {
+          firstName: "Sanjat",
+          lastName: "Lowanshi",
+        },
+        {
+          firstName: "Abhishek",
+          lastName: "Sawant",
+        },
+      ];
+
+      const info = names.map(function (name) {
+        console.log(name.lastName);
+      });
+    </script>
+  </body>
+</html>

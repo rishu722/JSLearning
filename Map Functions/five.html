@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Example</title>
+</head>
+<body>
+  <button onclick="capitalizeNames()">Capitalize Names</button>
+  <p id="result"></p>
+
+  <script>
+    function capitalizeNames() {
+      const names = ["john", "emma", "peter"];
+      const capitalizedNames = names.map(name => name.charAt(0).toUpperCase() + name.slice(1));
+      document.getElementById('result').innerText = capitalizedNames.join(', ');
+    }
+  </script>
+</body>
+</html>

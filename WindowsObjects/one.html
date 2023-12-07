@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //   let name = prompt("Enter your Name");
+      //   document.write(name);
+    //   let dailog = window.confirm("Do you learning JS");
+
+      function myFunction() {
+        let text;
+        if (confirm("Press a button!") == true) {
+          text = "You pressed OK!";
+        } else {
+          text = "You canceled!";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+
+      myFunction();
+    </script>
+  </body>
+</html>

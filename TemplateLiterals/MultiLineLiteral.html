@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object with Template Literals</h1>
+    <script>
+      let info = {
+        name: "Rishabh",
+        role: "Frontend Engineer",
+        age: 25,
+        city: "bhopal",
+      };
+      let { name, role, age, city } = info;
+      console.log(info);
+
+      const car = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2022,
+        features: {
+          safety: ["airbags", "ABS", "backup camera"],
+          entertainment: ["Bluetooth", "touchscreen"],
+        },
+      };
+
+      const category = "safety";
+      const featureIndex = 1;
+
+      //   const selectedFeature = `${car.features[category][featureIndex]}`;
+      const selectedFeature = `${car.features[category][2]}`;
+
+      console.log(selectedFeature);
+
+      //Advance Concept
+
+      function createPerson(firstName, lastName, age) {
+        return {
+          firstName,
+          lastName,
+          age,
+          introduce() {
+            return `Hi, I'm ${this.firstName} ${this.lastName}, and I'm ${this.age} years old.`;
+          },
+        };
+      }
+
+      const personData = {
+        firstName: "Rishabh",
+        lastName: "saxena",
+        age: 25,
+      };
+
+      const person = createPerson(
+        `${personData.firstName}`,
+        `${personData.lastName}`,
+        `${personData.age}`
+      );
+
+      console.log(person.introduce());
+    </script>
+  </body>
+</html>

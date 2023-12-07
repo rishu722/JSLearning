@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter JS Practice</title>
+    <style>
+      #filterInput {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Filter JS Practice</h2>
+
+    <label for="filterInput">Filter Items:</label>
+    <input type="text" id="filterInput" oninput="filterItems()" />
+
+    <ul id="itemList">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Banana</li>
+      <li>Grapes</li>
+      <li>Strawberry</li>
+      <li>Mango</li>
+    </ul>
+
+    <script>
+      function filterItems() {
+        // Get the input value and convert it to lowercase for case-insensitive filtering
+        var filterValue = document
+          .getElementById("filterInput")
+          .value.toLowerCase();
+
+        // Get the list items
+        var items = document
+          .getElementById("itemList")
+          .getElementsByTagName("li");
+
+        // Loop through each item and hide or show based on the filter value
+        for (var i = 0; i < items.length; i++) {
+          var currentItem = items[i];
+          var itemText = currentItem.textContent.toLowerCase();
+
+          if (itemText.includes(filterValue)) {
+            currentItem.style.display = "list-item";
+          } else {
+            currentItem.style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
