@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 0;
+        justify-content: flex-end;
+      }
+
+      .rating input {
+        display: none;
+      }
+
+      .rating label {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 30px;
+        color: #bebcbc;
+        margin-right: 16px;
+        transition: color 0.3s;
+      }
+
+      .rating label:before {
+        content: "★";
+        display: block;
+      }
+
+      .rating input:checked ~ label {
+        color: gold;
+      }
+
+      .rating label:hover:before {
+        transform: scale(1.5);
+        transition: all ease-in-out 0.3s;
+      }
+
+      .rating input:checked ~ label:before,
+      .rating label:hover {
+        color: gold;
+      }
+
+      .rating label:hover ~ label:before {
+        color: gold;
+      }
+      .rating label {
+        order: 1;
+      }
+
+      /* .rating label:nth-child(4) {
+        order: 4;
+      }
+
+      .rating label:nth-child(3) {
+        order: 3;
+      }
+
+      .rating label:nth-child(2) {
+        order: 2;
+      }
+
+      .rating label:nth-child(1) {
+        order: 1;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="rating">
+      <input type="radio" id="star1" name="rating" value="1" />
+      <label for="star1"></label>
+      <input type="radio" id="star2" name="rating" value="2" />
+      <label for="star2"></label>
+      <input type="radio" id="star3" name="rating" value="3" />
+      <label for="star3"></label>
+      <input type="radio" id="star4" name="rating" value="4" />
+      <label for="star4"></label>
+      <input type="radio" id="star5" name="rating" value="5" />
+      <label for="star5"></label>
+    </div>
+  </body>
+</html>

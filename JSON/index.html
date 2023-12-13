@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JSON</h1>
+    <p>
+      JSON is a format for storing and transporting data. JSON is often used
+      when data is sent from a server to a web page.
+    </p>
+    <h5>What is JSON?</h5>
+    <ul>
+      <li>JSON stands for JavaScript Object Notation</li>
+      <li>JSON is a lightweight data interchange format</li>
+      <li>JSON is language independent *</li>
+      <li>JSON is "self-describing" and easy to understand</li>
+    </ul>
+    <script>
+      const data = {
+        name: "John",
+        age: 22,
+        hobby: {
+          reading: true,
+          gaming: false,
+          sport: "football",
+        },
+        class: ["JavaScript", "HTML", "CSS"],
+      };
+
+      console.log(data.name);
+      console.log(data.hobby);
+
+      console.log(data.hobby.sport);
+      console.log(data.class[1]);
+
+      // json object into 
+      const jsonData = '{ "name": "John", "age": 22 }';
+
+      // converting to JavaScript object
+      const obj = JSON.parse(jsonData);
+
+      // accessing the data
+      console.log(obj); // John
+    </script>
+  </body>
+</html>
