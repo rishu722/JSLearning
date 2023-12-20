@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIFE</title>
+  </head>
+  <body>
+    <p>
+      the pollution which is occured from global variable to remove that we use
+      the IIFE
+    </p>
+    <p>IIFE :Immediately Invoked Function Expressions (IIFE)</p>
+    <h4>Use cases</h4>
+    <p>
+      Avoid polluting the global namespace<br /> Because our application could include
+      many functions and global variables from different source files, it's
+      important to limit the number of global variables. If we have some
+      initiation code that we don't need to use again, we could use the IIFE
+      pattern. As we will not reuse the code again, using IIFE in this case is
+      better than using a function declaration or a function expression.
+    </p>
+    <script>
+      (function learning() {
+        console.log("Hello, Learning JS 1");
+      })();
+      (() => {
+        console.log("Hello, Learning JS 2");
+      })();
+
+      (() => console.log("Hello, Learning JS 3"))();
+
+      ((userName) => {
+        console.log(`Hello,Welcome ${userName} `);
+      })("Rishabh");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="calc.js"></script>
+  </head>
+  <body>
+    <h2>Simple Calculator</h2>
+    <div class="cal_wrapper">
+      <div class="calcutation_box">
+        <input type="text" id="result" />
+      </div>
+      <div class="top_btn">
+        <button type="button" value="+" onclick="appendToResult('+')" >+</button>
+        <buton type="button" value="-" onclick="appendToResult('-')" >-</buton>
+        <button type="button" value="*" onclick="appendToResult('*')" >*</button>
+        <button type="button" value="/" onclick="appendToResult('/')" >/</button>
+      </div>
+      <div class="bottom_btn">
+        <div class="number_btn_wrapper">
+          <div class="number_btn">
+            <button type="button" value="1" onclick="appendToResult('1')" >1</button>
+            <button type="button" value="2" onclick="appendToResult('2')" >2</button>
+            <button type="button" value="3" onclick="appendToResult('3')" >3</button>
+          </div>
+          <div class="number_btn">
+            <button type="button" value="4" onclick="appendToResult('4')" >4</button>
+            <button type="button" value="5" onclick="appendToResult('5')" >5</button>
+            <button type="button" value="6" onclick="appendToResult('6')" >6</button>
+          </div>
+          <div class="number_btn">
+            <button type="button" value="7" onclick="appendToResult('7')" >7</button>
+            <button type="button" value="8" onclick="appendToResult('8')" >8</button>
+            <button type="button" value="9" onclick="appendToResult('9')" >9</button>
+          </div>
+          <div class="number_btn">
+            <button type="button" value="0" onclick="appendToResult('0')" >0</button>
+            <button type="button" value="." onclick="appendToResult('.')" >.</button>
+            <button type="button" value="C" onclick="clearResult()" >C</button>
+          </div>
+        </div>
+        <div class="">
+          <button type="button" value="=" onclick="calculateResult()" >=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

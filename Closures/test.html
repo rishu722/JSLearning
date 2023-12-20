@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textarea Focus Example</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #outer-section {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    #textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="outer-section">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio delectus, suscipit assumenda quidem laborum molestiae ipsam illum soluta, numquam vero. Aliquid nihil quasi quibusdam, tempora qui neque nostrum! Facere!</p>
+    <label for="textarea">Type something:</label>
+    <textarea id="textarea"></textarea>
+  </div>
+
+  <script>
+    // Add an event listener to the textarea to prevent focus on the outer section
+    document.getElementById('textarea').addEventListener('focusout', function (event) {
+      // Check if the related target (where focus is moving to) is outside the outer section
+      if (!event.relatedTarget || !document.getElementById('outer-section').contains(event.relatedTarget)) {
+        // If outside, prevent focus on the outer section
+        document.getElementById('outer-section').focus();
+      }
+    });
+  </script>
+</body>
+</html>
