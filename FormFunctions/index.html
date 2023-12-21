@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form functions</title>
+  </head>
+  <style>
+    .focus{
+        background-color: red;
+    }
+  </style>
+  <body>
+    <h1>Form functions</h1>
+    <form action="" method="get" name="myForm">
+      <label for="fname">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        onfocus="focusFunction()"
+      /><br /><br />
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        onfocus="focusFunction()"
+      /><br /><br />
+      <label for="country">Choose a country:</label>
+      <select name="country" id="country">
+        <option value="country">India</option>
+        <option value="country">India</option>
+        <option value="country">India</option>
+        <option value="country">India</option>
+        <option value="country">India</option>
+        <option value="country">India</option>
+      </select>
+      <br /><br />
+
+      <div id="textBox" style="border: 1px solid red; min-height: 20px"></div>
+      <input type="text" oninput="inputFunction(this)" />
+      <button type="submit" id="submit" onsubmit="return validateForm()">
+        Submit
+      </button>
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      let firstName = document.getElementById("fname");
+      let lastName = document.getElementById("lname");
+      let submitBtn = document.getElementById("submit");
+      let input = document.querySelector("input");
+      const el = null;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("User Name : ", firstName.value);
+          console.log("submitted");
+        });
+
+    //   function validateForm() {
+    //     let x = document.forms["myForm"]["fname"].value;
+    //     if (x == "") {
+    //       alert("Name must be filled out");
+    //       return false;
+    //     }
+    //   }
+
+    //   function focusFunction() {
+    //     //this function is for particular single input box
+    //     firstName.style.backgroundColor = "red";
+    //   }
+    //   firstName.addEventListener("onFocus", function (e) {
+    //     inputElement.classList.add("focus");
+    //   });
+
+    //   firstName.addEventListener("onBlur", function (e) {
+    //     inputElement.classList.remove("focus");
+    //   });
+
+    //   function focusFunction(e) {
+    //     //this function is for particular single input box
+    //     if (e === document.activeElement) {
+    //       // If the input is already focused, remove focus
+    //       e.blur();
+    //     } else {
+    //       // If the input is not focused, set focus
+    //       e.focus();
+    //     }
+    //   }
+      function inputFunction(e) {
+        let valueInInput = e.value;
+        document.getElementById("textBox").innerHTML = valueInInput;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Notes -->
+
+<!-- The preventDefault() method cancels the event if it is cancelable, meaning that
+the default action that belongs to the event will not occur. -->
+
+<!-- For example, this can be useful when: -->
+
+<!-- Clicking on a "Submit" button, prevent it from submitting a
+form -->
+
+<!-- Clicking on a link, prevent the link from following the URL -->
+
+<!-- Note: Not all events are cancelable. Use the cancelable property to find out if an event is
+cancelable.-->
+
+<!-- Note: The preventDefault() method does not prevent further
+propagation of an event through the DOM. Use the stopPropagation() method to
+handle this.  -->
