@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Logical Array coding Question</h1>
+    <script>
+      let myArr = [10, 25, 20, 233, 45, 88, 91, 29, 98];
+      let newArr = myArr.sort();
+      console.log(newArr[1]); // print second highest from front.
+//***********************************************************************************************************************************
+      const n = 2;
+      myArr.sort((a, b) => a - b);
+      const nthLargest = myArr[myArr.length - n];
+      console.log(nthLargest);
+
+//***********************************************************************************************************************************
+      let numbers = [1, 1, 5, 6, 7, 7, 8, 99, 99, 100];
+      function removeduplicate(num) {
+        let result = num.filter((item, index) => {
+          return num.indexOf(item) !== index;
+        });
+        return result;
+      }
+      console.log(removeduplicate(numbers)); //It will return duplicate numbers in array
+//***********************************************************************************************************************************
+      const array = [10, 20, 30, 40];
+      const result = array.map((num) => num / 2).filter((num) => num >= 15);
+      console.log(result);
+
+//***********************************************************************************************************************************
+    
+    </script>
+  </body>
+</html>

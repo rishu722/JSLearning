@@ -9,7 +9,29 @@
   <body>
     <h1>OOPS</h1>
     <script>
-        
+      // const student = {
+      //   first_name: "Mary",
+      //   last_name: "Green",
+      //   display_full_name: function () {
+      //     return `${this.first_name} ${this.last_name}`;
+      //   },
+      // };
+
+      // console.log(student.display_full_name());
+
+      //Creating a constructor function
+      function student(first_name, last_name) {
+        (this.first_name = first_name),
+          (this.last_name = last_name),
+          (this.display_full_name = function () {
+            return `${first_name} ${last_name}`;
+          });
+      }
+
+      const student1 = new student("Mary", "Green");
+      const student2 = new student("Lary", "Smith");
+
+      console.log(student2.display_full_name());
     </script>
   </body>
 </html>

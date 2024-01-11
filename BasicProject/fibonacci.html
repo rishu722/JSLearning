@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fibonacci</title>
+  </head>
+  <body>
+    <h1>fibonacci series</h1>
+    <script>
+      var fibonacci = (function () {
+        "use strict";
+
+        var memo = {};
+
+        function f(n) {
+          let value;
+
+          if (memo.hasOwnProperty(n)) {
+            value = memo[n];
+          } else {
+            if (n === 0 || n === 1) {
+              value = n;
+            } else {
+              value = f(n - 1) + f(n - 2);
+            }
+
+            memo[n] = value;
+          }
+
+          return value;
+        }
+
+        return f;
+      })();
+
+      this.console.log(fibonacci(10));
+    </script>
+  </body>
+</html>

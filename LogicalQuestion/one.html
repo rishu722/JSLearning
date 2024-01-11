@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First logical</title>
+  </head>
+  <body>
+    <script>
+      for (var i = 0; i <= 3; i++) {
+        setTimeout(function () {
+          console.log(i);
+        }, i * 1000);
+      }
+      //In Javascript hoisting process, declaration of i will be moved to the top of their scope, since i is defined using var in for loop, declaration of i will be moved to global scope in hoisting process.
+
+      // After three iteration of for loop, value of global scoped variable i will be 3. All three closures will refer to this same i variable from global scope.
+
+      //   for (let i = 0; i < 3; i++) {                              // It will print 1 2 bcz of let variable
+      //     setTimeout(function () {
+      //       console.log(i);
+      //     }, i * 1000);
+      //   }
+    </script>
+  </body>
+</html>

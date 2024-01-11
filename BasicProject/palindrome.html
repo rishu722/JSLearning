@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Number</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(num) {
+        const numStr = num.toString();
+        return numStr === numStr.split("").reverse().join("");
+      }
+
+      function checkPalindromesInArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          const num = arr[i];
+
+          if (isPalindrome(num)) {
+            console.log(`${num} is a palindrome.`);
+          } else {
+            console.log(`${num} is not a palindrome.`);
+          }
+        }
+      }
+      const numbersArray = [121, 12321, 555, 12345, 1221];
+      checkPalindromesInArray(numbersArray);
+    </script>
+  </body>
+</html>
