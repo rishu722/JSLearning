@@ -13,79 +13,81 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="menu_side">
+    <header>
+      <div class="menu-side">
         <h1>Spotify</h1>
-        <div class="playlist">
-          <h4 class="active">
+        <div class="play-list" id="play-list">
+          <h4 class="title active">
             <span></span><i class="bi bi-music-note-beamed"></i> Playlist
           </h4>
-          <h4>
+          <h4 class="title">
             <span></span><i class="bi bi-music-note-beamed"></i> Last Listening
           </h4>
-          <h4>
+          <h4 class="title">
             <span></span><i class="bi bi-music-note-beamed"></i> Recommended
           </h4>
         </div>
-        <!-- <div class="menu_song">
+        <div class="menu-song">
+          <ul>
             <li class="songItem">
-                <span>01</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+              <span>01</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
             </li>
             <li class="songItem">
-                <span>02</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+              <span>02</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
             </li>
             <li class="songItem">
-                <span>03</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+              <span>03</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
             </li>
             <li class="songItem">
-                <span>04</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+              <span>04</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
             </li>
             <li class="songItem">
-                <span>05</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+              <span>05</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
             </li>
             <li class="songItem">
-                <span>06</span>
-                <img src="img/1.jpg" alt="Alan">
-                <h5>
-                    On My Way
-                    <div class="subtitle">Alan Walker</div>
-                </h5>
-                    <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+              <span>06</span>
+              <img src="img/1.jpeg" alt="Alan" />
+              <h5>
+                On My Way
+                <div class="subtitle">Alan Walker</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
             </li>
-        </div> -->
+          </ul>
+        </div>
       </div>
 
-      <div class="song_side">
+      <div class="song-side">
         <nav>
           <ul>
             <li>Discover <span></span></li>
@@ -97,159 +99,70 @@
             <input type="text" placeholder="Search Music..." />
           </div>
           <div class="user">
-            <img
-              src="./images/12.jpeg"
-              alt="User"
-              title="Spotify (Chirag Nagar)"
-            />
+            <button onclick="myFunction()" class="dropbtn">
+              Rishabh saxena
+              <img src="img/alan.jpeg" alt="User" />
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Profile</a>
+              <a href="#">Account</a>
+              <a href="#">Upgarde to Premium</a>
+              <a href="#">Setting</a>
+            </div>
           </div>
         </nav>
         <div class="content">
-          <h1>Alan Walker - Faded</h1>
-          <p>
-            So when your tears roll down your pillow like a river
-            <br />
-            I'll be there for you
-          </p>
+          <div id="arjit" class="tabcontent">
+            <h1>Arjit Singh</h1>
+          </div>
+          <div id="alan" class="tabcontent">
+            <h1>Alan Walker</h1>
+          </div>
+          <div id="atif" class="tabcontent">
+            <h1>Atif Aslam</h1>
+          </div>
+          <div id="guru" class="tabcontent">
+            <h1>Guru Randawa</h1>
+          </div>
+          <div id="dhvani" class="tabcontent">
+            <h1>Dhvani</h1>
+          </div>
+          <div id="diljit" class="tabcontent">
+            <h1>Diljit Dosanjh</h1>
+          </div>
+          <div id="jubin" class="tabcontent">
+            <h1>Jubin Nautiyal</h1>
+          </div>
+          <div id="justin" class="tabcontent">
+            <h1>justin Bieber</h1>
+          </div>
+          <div id="neha" class="tabcontent">
+            <h1>Neha Kakker</h1>
+          </div>
+          <div id="honey" class="tabcontent">
+            <h1>Honey Singht</h1>
+          </div>
           <div class="buttons">
-            <button>PLAY</button>
-            <button>FOLLOW</button>
+            <button class="btn">PLAY</button>
+            <button onclick="disable()" class="btn" id="followBtn">
+              FOLLOW
+            </button>
           </div>
         </div>
-        <div class="popular_song">
+        <div class="popular-song">
           <div class="h4">
             <h4>Popular Song</h4>
             <div class="btn_s">
-              <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-              <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+              <i class="bi bi-arrow-left-short"></i>
+              <i class="bi bi-arrow-right-short"></i>
             </div>
           </div>
-          <div class="pop_song">
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
-              <div class="img_play">
-                <img src="images/1.jpeg" alt="alan" />
-                <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
-              </div>
-              <h5>
-                On My Way
-                <br />
-                <div class="subtitle">Alan Walker</div>
-              </h5>
-            </li>
-            <li class="songItem">
+          <div class="pop-song">
+            <ul>
+              <li class="songItem">
                 <div class="img_play">
-                  <img src="images/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
                 </div>
                 <h5>
                   On My Way
@@ -257,86 +170,223 @@
                   <div class="subtitle">Alan Walker</div>
                 </h5>
               </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+              <li class="songItem">
+                <div class="img_play">
+                  <img src="img/1.jpeg" alt="alan" />
+                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </div>
+                <h5>
+                  On My Way
+                  <br />
+                  <div class="subtitle">Alan Walker</div>
+                </h5>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- <div class="popular_artists">
-            <div class="h4">
-                <h4>Popular Artists</h4>
-                <div class="btn_s">
-                    <i id="left_scrolls" class="bi bi-arrow-left-short"></i>
-                    <i id="right_scrolls" class="bi bi-arrow-right-short"></i>
-                </div>
+        <div class="popular-artists">
+          <div class="h4">
+            <h4>Popular Artists</h4>
+            <div class="btn_s">
+              <i class="bi bi-arrow-left-short"></i>
+              <i class="bi bi-arrow-right-short"></i>
             </div>
-            <div class="item">
-                <li>
-                    <img src="images/akhil.jpeg" alt="Arjit Singh" title="Arjit Singh">
-                </li>
-                <li>
-                    <img src="images/alan.jpeg" alt="Alan Walker" title="Alan Walker">
-                </li>
-                <li>
-                    <img src="images/atif.jpeg" alt="Atif Aslam" title="Atif Aslam">
-                </li>
-                <li>
-                    <img src="images/guru.jpeg" alt="Guru RAndawa" title="Guru Randawa">
-                </li>
-                <li>
-                    <img src="images/dhvani.jpeg" alt="Dhvani" title="Dhvani">
-                </li>
-                <li>
-                    <img src="./images/Diljit_Dosanjh.jpeg" alt="Diljit Dosanjh" title="Diljit Dosanjh">
-                </li>
-                <li>
-                    <img src="./images/jubin Nautiyal.jpeg" alt="Jubin Nautiyal" title="Jubin Nautiyal">
-                </li>
-                <li>
-                    <img src="./images/neha.jpeg" alt="Neha Kakker" title="Neha Kakker">
-                </li>
-                <li>
-                    <img src="./images/justin-bieber-lede.jpeg" alt="Justin Bieber" title="Justin Bieber">
-                </li>
-                <li>
-                    <img src="./images/honey.jpeg" alt="Honey Singh" title="Honey Singh">
-                </li>
-                <li>
-                    <img src="images/akhil.jpeg" alt="Akhil" title="Akhil">
-                </li>
-                 change all img  
-            </div>
-        </div> -->
+          </div>
+          <div class="item">
+            <ul>
+              <li>
+                <img
+                  src="img/arjit.jpeg"
+                  alt="Arjit Singh"
+                  title="Arjit Singh"
+                  onclick="artistsTitle('arjit')"
+                  id="defaultOpen"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/alan.jpeg"
+                  alt="Alan Walker"
+                  title="Alan Walker"
+                  onclick="artistsTitle('alan')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/atif.jpeg"
+                  alt="Atif Aslam"
+                  title="Atif Aslam"
+                  onclick="artistsTitle('atif')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/guru.jpeg"
+                  alt="Guru RAndawa"
+                  title="Guru Randawa"
+                  onclick="artistsTitle('guru')"
+                />
+              </li>
+              <li>
+                <img src="img/dhvani.jpeg" alt="Dhvani" title="Dhvani"  onclick="artistsTitle('dhvani')"/>
+              </li>
+              <li>
+                <img
+                  src="img/Diljit_Dosanjh.jpeg"
+                  alt="Diljit Dosanjh"
+                  title="Diljit Dosanjh"
+                  onclick="artistsTitle('diljit')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/jubin Nautiyal.jpeg"
+                  alt="Jubin Nautiyal"
+                  title="Jubin Nautiyal"
+                  onclick="artistsTitle('jubin')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/neha.jpeg"
+                  alt="Neha Kakker"
+                  title="Neha Kakker"
+                  onclick="artistsTitle('neha')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/justin-bieber-lede.jpeg"
+                  alt="Justin Bieber"
+                  title="Justin Bieber"
+                  onclick="artistsTitle('justin')"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/honey.jpeg"
+                  alt="Honey Singh"
+                  title="Honey Singh"
+                  onclick="artistsTitle('honey')"
+                />
+              </li>
+              <li>
+                <img src="img/akhil.jpeg" alt="Akhil" title="Akhil"  onclick="artistsTitle('akhil')"/>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="master_play">
+      <div class="master-play">
         <div class="wave">
-            <div class="wave1"></div>
-            <div class="wave1"></div>
-            <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
         </div>
-        <img src="./images/26th.jpeg" alt="Alan" id="poster_master_play">
-        <h5 id="title">Vande Mataram<br>
-            <div class="subtitle">Bankim Chandra</div>
+        <img src="img/alan.jpeg" alt="Alan" id="poster_master_play" />
+        <h5 id="title">
+          Fade In<br />
+          <div class="subtitle">Alan Walker</div>
         </h5>
         <div class="icon">
-            <i class="bi bi-skip-start-fill" id="back"></i>
-            <i class="bi bi-play-fill" id="masterPlay"></i>
-            <i class="bi bi-skip-end-fill" id="next"></i>
+          <i class="bi bi-skip-start-fill" id="back"></i>
+          <i class="bi bi-play-fill" id="masterPlay"></i>
+          <i class="bi bi-skip-end-fill" id="next"></i>
         </div>
         <span id="currentStart">0:00</span>
         <div class="bar">
-            <input type="range" id="seek" min="0" value="0" max="100">
-            <div class="bar2" id="bar2"></div>
-            <div class="dot"></div>
+          <input type="range" id="seek" />
+          <div class="bar2" id="bar2"></div>
+          <div class="dot"></div>
         </div>
         <span id="currentEnd">0:00</span>
 
         <div class="vol">
-            <i class="bi bi-volume-down-fill" id="vol_icon"></i>
-            <input type="range" id="vol" min="0" value="30" max="100">
-            <div class="vol_bar"></div>
-            <div class="dot" id="vol_dot"></div>
+          <i class="bi bi-volume-down-fill" id="vol_icon"></i>
+          <input type="range" id="vol" min="0" value="30" max="100" />
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
         </div>
-    </div>
-    </div>
+      </div>
+    </header>
     <script src="app.js"></script>
   </body>
 </html>

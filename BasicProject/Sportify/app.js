@@ -1,85 +1,117 @@
-const music = new Audio("vande.mp3");
-
-// create Array
+const music = new Audio("song1.mp3"); //Audio() is web api which will retrun html audio element.
 
 const songs = [
   {
     id: "1",
     songName: ` On My Way <br>
         <div class="subtitle">Alan Walker</div>`,
-    poster: "./images/1.jpeg",
+    poster: "img/1.jpeg",
+    song: "songs/1.mp3",
   },
   {
     id: "2",
     songName: ` Alan Walker-Fade <br>
         <div class="subtitle">Alan Walker</div>`,
-    poster: "./images/2.jpeg",
+    poster: "img/2.jpeg",
+    song: "songs/2.mp3",
   },
-  // all object type
   {
     id: "3",
     songName: `Cartoon - On & On <br><div class="subtitle"> Daniel Levi</div>`,
-    poster: "./images/3.jpeg",
+    poster: "img/3.jpeg",
   },
   {
     id: "4",
     songName: `Warriyo - Mortals <br><div class="subtitle">Mortals</div>`,
-    poster: "./images/4.jpeg",
+    poster: "img/4.jpeg",
   },
   {
     id: "5",
     songName: `Ertugrul Gazi <br><div class="subtitle">Ertugrul</div>`,
-    poster: "./images/5.jpeg",
+    poster: "img/5.jpeg",
   },
   {
     id: "6",
     songName: `Electronic Music <br><div class="subtitle">Electro</div>`,
-    poster: "./images/6.jpeg",
+    poster: "img/6.jpeg",
   },
   {
     id: "7",
     songName: `Agar Tum Sath Ho <br><div class="subtitle">Tamashaa</div>`,
-    poster: "./images/7.jpeg",
+    poster: "img/7.jpeg",
   },
   {
     id: "8",
     songName: `Suna Hai <br><div class="subtitle">Neha Kakker</div>`,
-    poster: "./images/8.jpeg",
+    poster: "img/8.jpeg",
   },
   {
     id: "9",
     songName: `Dilber <br><div class="subtitle">Satyameva Jayate</div>`,
-    poster: "./images/9.jpeg",
+    poster: "img/9.jpeg",
   },
   {
     id: "10",
     songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
-    poster: "./images/10.jpeg",
+    poster: "img/10.jpeg",
   },
   {
     id: "11",
     songName: `Lagdi Lahore Di <br><div class="subtitle">Street Dancer 3D</div>`,
-    poster: "./images/11.jpeg",
+    poster: "img/11.jpeg",
   },
   {
     id: "12",
     songName: `Putt Jatt Da <br><div class="subtitle">Putt Jatt Da</div>`,
-    poster: "./images/12.jpeg",
+    poster: "img/12.jpeg",
   },
   {
     id: "13",
     songName: `Baarishein <br><div class="subtitle">Atif Aslam</div>`,
-    poster: "./images/13.jpeg",
+    poster: "img/13.jpeg",
   },
   {
     id: "14",
     songName: `Vaaste <br><div class="subtitle">Dhvani Bhanushali</div>`,
-    poster: "./images/14.jpeg",
+    poster: "img/14.jpeg",
   },
   {
     id: "15",
     songName: `Lut Gaye <br><div class="subtitle">Jubin Nautiyal</div>`,
-    poster: "./images/15.jpeg",
+    poster: "img/15.jpeg",
+  },
+]; // array object for poster and song names & arties
+
+const lastListener = [
+  {
+    id: "1",
+    songName: `Dilber <br><div class="subtitle">Satyameva Jayate</div>`,
+    poster: "img/3.jpeg",
+  },
+  {
+    id: "2",
+    songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+    poster: "img/10.jpeg",
+  },
+  {
+    id: "3",
+    songName: `Lagdi Lahore Di <br><div class="subtitle">Street Dancer 3D</div>`,
+    poster: "img/11.jpeg",
+  },
+  {
+    id: "4",
+    songName: `Putt Jatt Da <br><div class="subtitle">Putt Jatt Da</div>`,
+    poster: "img/12.jpeg",
+  },
+  {
+    id: "13",
+    songName: `Baarishein <br><div class="subtitle">Atif Aslam</div>`,
+    poster: "img/13.jpeg",
+  },
+  {
+    id: "14",
+    songName: `Vaaste <br><div class="subtitle">Dhvani Bhanushali</div>`,
+    poster: "img/14.jpeg",
   },
 ];
 
@@ -87,8 +119,9 @@ Array.from(document.getElementsByClassName("songItem")).forEach(
   (element, i) => {
     element.getElementsByTagName("img")[0].src = songs[i].poster;
     element.getElementsByTagName("h5")[0].innerHTML = songs[i].songName;
+    element.getElementsByTagName("i")[0].src = songs[i].song;
   }
-);
+); // using this forEach we will target image, song , songName.
 
 let masterPlay = document.getElementById("masterPlay");
 let wave = document.getElementsByClassName("wave")[0];
@@ -105,7 +138,7 @@ masterPlay.addEventListener("click", () => {
     masterPlay.classList.remove("bi-pause-fill");
     wave.classList.remove("active2");
   }
-});
+}); // using this eventListener we will target music player button play pause and next prev.
 
 const makeAllPlays = () => {
   Array.from(document.getElementsByClassName("playListPlay")).forEach(
@@ -114,12 +147,7 @@ const makeAllPlays = () => {
       element.classList.remove("bi-pause-circle-fill");
     }
   );
-};
-const makeAllBackgrounds = () => {
-  Array.from(document.getElementsByClassName("songItem")).forEach((element) => {
-    element.style.background = "rgb(105, 105, 170, 0)";
-  });
-};
+}; // From this arrow function we will change play and pause icons
 
 let index = 0;
 let poster_master_play = document.getElementById("poster_master_play");
@@ -131,8 +159,8 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach(
       makeAllPlays();
       e.target.classList.remove("bi-play-circle-fill");
       e.target.classList.add("bi-pause-circle-fill");
-      music.src = `audio/${index}.mp3`;
-      poster_master_play.src = `img/${index}.jpg`;
+      music.src = `songs/${index}.mp3`;
+      poster_master_play.src = `img/${index}.jpeg`;
       music.play();
       let song_title = songs.filter((ele) => {
         return ele.id == index;
@@ -175,7 +203,7 @@ music.addEventListener("timeupdate", () => {
   }
   currentEnd.innerText = `${min}:${sec}`;
 
-  let min1 = Math.floor(music_curr / 60);
+  let min1 = Math.floor(music_curr / 60); // Math.floor method rounds a number DOWN to the nearest integer
   let sec1 = Math.floor(music_curr % 60);
   if (sec1 < 10) {
     sec1 = `0${sec1}`;
@@ -235,8 +263,8 @@ back.addEventListener("click", () => {
   if (index < 1) {
     index = Array.from(document.getElementsByClassName("songItem")).length;
   }
-  music.src = `audio/${index}.mp3`;
-  poster_master_play.src = `img/${index}.jpg`;
+  music.src = `songs/${index}.mp3`;
+  poster_master_play.src = `img/${index}.jpeg`;
   music.play();
   let song_title = songs.filter((ele) => {
     return ele.id == index;
@@ -261,8 +289,8 @@ next.addEventListener("click", () => {
   if (index > Array.from(document.getElementsByClassName("songItem")).length) {
     index = 1;
   }
-  music.src = `audio/${index}.mp3`;
-  poster_master_play.src = `img/${index}.jpg`;
+  music.src = `songs/${index}.mp3`;
+  poster_master_play.src = `img/${index}.jpeg`;
   music.play();
   let song_title = songs.filter((ele) => {
     return ele.id == index;
@@ -282,24 +310,102 @@ next.addEventListener("click", () => {
   ].style.background = "rgb(105, 105, 170, .1)";
 });
 
-let left_scroll = document.getElementById("left_scroll");
-let right_scroll = document.getElementById("right_scroll");
-let pop_song = document.getElementsByClassName("pop_song")[0];
+let playList = document.getElementById("play-list");
+let playListBtns = playList.getElementsByTagName("h4");
 
-left_scroll.addEventListener("click", () => {
-  pop_song.scrollLeft -= 330;
-});
-right_scroll.addEventListener("click", () => {
-  pop_song.scrollLeft += 330;
-});
+for (let i = 0; i < playListBtns.length; i++) {
+  playListBtns[i].addEventListener("click", function () {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    Array.from(document.getElementsByClassName("songItem")).forEach(
+      (element, i) => {
+        element.getElementsByTagName("h5")[0].innerHTML =
+          lastListener[i].songName;
+        element.getElementsByTagName("img")[0].src = lastListener[i].poster;
+      }
+    );
+  });
+}
 
-let left_scrolls = document.getElementById("left_scrolls");
-let right_scrolls = document.getElementById("right_scrolls");
-let item = document.getElementsByClassName("item")[0];
+const button = document.getElementById("followBtn");
 
-left_scrolls.addEventListener("click", () => {
-  item.scrollLeft -= 330;
-});
-right_scrolls.addEventListener("click", () => {
-  item.scrollLeft += 330;
-});
+function disable() {
+  var element = document.getElementById("followBtn");
+  element.classList.add("disabled");
+  element.classList.remove("btn");
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
+function artistsTitle(artistsName) {
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(artistsName).style.display = "block";
+}
+document.getElementById("defaultOpen").click();
+
+//Need to work on It
+// const artists = [
+//   { id: "arjit", name: "Arjit Singh" },
+//   { id: "alan", name: "Alan Walker" },
+//   { id: "atif", name: "Atif Aslam" },
+//   { id: "guru", name: "Guru Randawa" },
+//   { id: "dhvani", name: "Dhvani" },
+//   { id: "diljit", name: "Diljit Dosanjh" },
+//   { id: "jubin", name: "Jubin Nautiyal" },
+//   { id: "justin", name: "Justin Bieber" },
+//   { id: "neha", name: "Neha Kakker" },
+//   { id: "honey", name: "Honey Singht" },
+// ];
+// function artistsTitle(artistsName) {
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   document.getElementById(artistsName).style.display = "block";
+// }
+
+// function changeArtistName(artistId) {
+//   let artist = artists.find((a) => a.id == artistId);
+//   if (artist) {
+//     artist.name = "Arjit Singh";
+//     updateTabContent(artistId);
+//     console.log("Artist Name: " + artist.name);
+
+//   }
+// }
+
+// function updateTabContent() {
+//   let contentDiv = document.querySelector(".artistsTitle");
+//   contentDiv.innerHTML = "";
+
+//   artists.forEach(function (artist) {
+//     let tab = document.createElement("div");
+//     tab.id = artist.id;
+//     tab.className = "tabcontent";
+//     tab.innerHTML = "<h1>" + artist.name + "</h1>";
+
+//     tab.addEventListener("click", function () {
+//       openTab(artist.id);
+//     });
+
+//     contentDiv.appendChild(tab);
+//   });
+// }
