@@ -82,6 +82,39 @@ const songs = [
   },
 ]; // array object for poster and song names & arties
 
+const lastListener = [
+  {
+    id: "1",
+    songName: `Dilber <br><div class="subtitle">Satyameva Jayate</div>`,
+    poster: "img/3.jpeg",
+  },
+  {
+    id: "2",
+    songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+    poster: "img/10.jpeg",
+  },
+  {
+    id: "3",
+    songName: `Lagdi Lahore Di <br><div class="subtitle">Street Dancer 3D</div>`,
+    poster: "img/11.jpeg",
+  },
+  {
+    id: "4",
+    songName: `Putt Jatt Da <br><div class="subtitle">Putt Jatt Da</div>`,
+    poster: "img/12.jpeg",
+  },
+  {
+    id: "13",
+    songName: `Baarishein <br><div class="subtitle">Atif Aslam</div>`,
+    poster: "img/13.jpeg",
+  },
+  {
+    id: "14",
+    songName: `Vaaste <br><div class="subtitle">Dhvani Bhanushali</div>`,
+    poster: "img/14.jpeg",
+  },
+];
+
 Array.from(document.getElementsByClassName("songItem")).forEach(
   (element, i) => {
     element.getElementsByTagName("img")[0].src = songs[i].poster;
@@ -279,13 +312,22 @@ next.addEventListener("click", () => {
 
 let playList = document.getElementById("play-list");
 let playListBtns = playList.getElementsByTagName("h4");
+
 for (let i = 0; i < playListBtns.length; i++) {
   playListBtns[i].addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    Array.from(document.getElementsByClassName("songItem")).forEach(
+      (element, i) => {
+        element.getElementsByTagName("h5")[0].innerHTML =
+          lastListener[i].songName;
+        element.getElementsByTagName("img")[0].src = lastListener[i].poster;
+      }
+    );
   });
 }
+
 const button = document.getElementById("followBtn");
 
 function disable() {
@@ -310,3 +352,60 @@ window.onclick = function (event) {
     }
   }
 };
+function artistsTitle(artistsName) {
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(artistsName).style.display = "block";
+}
+document.getElementById("defaultOpen").click();
+
+//Need to work on It
+// const artists = [
+//   { id: "arjit", name: "Arjit Singh" },
+//   { id: "alan", name: "Alan Walker" },
+//   { id: "atif", name: "Atif Aslam" },
+//   { id: "guru", name: "Guru Randawa" },
+//   { id: "dhvani", name: "Dhvani" },
+//   { id: "diljit", name: "Diljit Dosanjh" },
+//   { id: "jubin", name: "Jubin Nautiyal" },
+//   { id: "justin", name: "Justin Bieber" },
+//   { id: "neha", name: "Neha Kakker" },
+//   { id: "honey", name: "Honey Singht" },
+// ];
+// function artistsTitle(artistsName) {
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (let i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   document.getElementById(artistsName).style.display = "block";
+// }
+
+// function changeArtistName(artistId) {
+//   let artist = artists.find((a) => a.id == artistId);
+//   if (artist) {
+//     artist.name = "Arjit Singh";
+//     updateTabContent(artistId);
+//     console.log("Artist Name: " + artist.name);
+
+//   }
+// }
+
+// function updateTabContent() {
+//   let contentDiv = document.querySelector(".artistsTitle");
+//   contentDiv.innerHTML = "";
+
+//   artists.forEach(function (artist) {
+//     let tab = document.createElement("div");
+//     tab.id = artist.id;
+//     tab.className = "tabcontent";
+//     tab.innerHTML = "<h1>" + artist.name + "</h1>";
+
+//     tab.addEventListener("click", function () {
+//       openTab(artist.id);
+//     });
+
+//     contentDiv.appendChild(tab);
+//   });
+// }
