@@ -352,14 +352,19 @@ window.onclick = function (event) {
     }
   }
 };
-function artistsTitle(artistsName) {
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  document.getElementById(artistsName).style.display = "block";
-}
-document.getElementById("defaultOpen").click();
+// function artistsTitle(artistsName) {
+//   let i, tabcontent, tablinks;
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     for (i = 0; i < tabcontent.length; i++) {
+//       tabcontent[i].style.display = "none";
+//     }
+//     tablinks = document.getElementsByClassName("tablink");
+//     for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].style.backgroundColor = "";
+//     }
+//     document.getElementById(artistsName).style.display = "block";
+// }
+// document.getElementById("defaultOpen").click();
 
 //Need to work on It
 // const artists = [
@@ -409,3 +414,16 @@ document.getElementById("defaultOpen").click();
 //     contentDiv.appendChild(tab);
 //   });
 // }
+function openLibrary(headerBtnName) {
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(headerBtnName).style.display = "block";
+}
+// document.getElementById("defaultOpen").click();
