@@ -313,8 +313,8 @@ next.addEventListener("click", () => {
 let playList = document.getElementById("play-list");
 let playListBtns = playList.getElementsByTagName("h4");
 
-for (let i = 0; i < playListBtns.length; i++) {
-  playListBtns[i].addEventListener("click", function () {
+for (const playListBtn of playListBtns) {
+  playListBtn.addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -328,10 +328,11 @@ for (let i = 0; i < playListBtns.length; i++) {
   });
 }
 
+
 const button = document.getElementById("followBtn");
 
 function disable() {
-  var element = document.getElementById("followBtn");
+  let element = document.getElementById("followBtn");
   element.classList.add("disabled");
   element.classList.remove("btn");
 }
@@ -409,3 +410,75 @@ document.getElementById("defaultOpen").click();
 //     contentDiv.appendChild(tab);
 //   });
 // }
+function openLibrary(headerBtnName) {
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(headerBtnName).style.display = "block";
+}
+// document.getElementById("defaultOpen").click();
+let header = document.getElementById("home-tabs-btn-song");
+let btns = header.getElementsByClassName("main-tabs");
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    // Remove "active" class from all tabs
+    for (let j = 0; j < btns.length; j++) {
+      btns[j].classList.remove("active");
+    }
+
+    // Add "active" class to the clicked tab
+    this.classList.add("active");
+
+    // Get the corresponding content element and show it
+    let contentId = "content-" + (i + 1);
+    showContent(contentId);
+  });
+}
+
+function showContent(contentId) {
+  // Hide all content elements
+  let allContent = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < allContent.length; i++) {
+    allContent[i].style.display = "none";
+  }
+
+  // Show the specified content element
+  let currentContent = document.getElementById(contentId);
+  if (currentContent) {
+    currentContent.style.display = "block";
+  }
+}
+
+
+function showContent(contentId) {
+  // Hide all content elements
+  let allContent = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < allContent.length; i++) {
+    allContent[i].style.display = "none";
+  }
+
+  // Show the specified content element
+  let currentContent = document.getElementById(contentId);
+  if (currentContent) {
+    currentContent.style.display = "block";
+  }
+
+  // Remove "active" class from all tabs
+  let allTabs = document.getElementsByClassName("main-tabs");
+  for (let i = 0; i < allTabs.length; i++) {
+    allTabs[i].classList.remove("active");
+  }
+
+  // Add "active" class to the clicked tab
+  let currentTab = document.querySelector("[onclick='showContent(\"" + contentId + "\")']");
+  if (currentTab) {
+    currentTab.classList.add("active");
+  }
+}

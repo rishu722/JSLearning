@@ -89,11 +89,21 @@
 
       <div class="song-side">
         <nav>
-          <ul>
-            <li>Discover <span></span></li>
-            <li>MY LIBRARY</li>
-            <li>RADIO</li>
-          </ul>
+          <div class="header-btn" id="header-btn">
+            <button
+              class="tablink"
+              onclick="openLibrary('discover')"
+              id="defaultOpen"
+            >
+              Discover <span></span>
+            </button>
+            <button class="tablink" onclick="openLibrary('mYLIBRARY')">
+              MY LIBRARY
+            </button>
+            <button class="tablink" onclick="openLibrary('radio')">
+              RADIO
+            </button>
+          </div>
           <div class="search">
             <i class="bi bi-search"></i>
             <input type="text" placeholder="Search Music..." />
@@ -111,248 +121,608 @@
             </div>
           </div>
         </nav>
-        <div class="content">
-          <div id="arjit" class="tabcontent">
-            <h1>Arjit Singh</h1>
+        <div id="home-tabs-btn-song">
+          <div class="main-tabs" onclick="showContent('content-1')">Home Page</div>
+          <div class="main-tabs" onclick="showContent('content-2')">
+            content  
           </div>
-          <div id="alan" class="tabcontent">
-            <h1>Alan Walker</h1>
-          </div>
-          <div id="atif" class="tabcontent">
-            <h1>Atif Aslam</h1>
-          </div>
-          <div id="guru" class="tabcontent">
-            <h1>Guru Randawa</h1>
-          </div>
-          <div id="dhvani" class="tabcontent">
-            <h1>Dhvani</h1>
-          </div>
-          <div id="diljit" class="tabcontent">
-            <h1>Diljit Dosanjh</h1>
-          </div>
-          <div id="jubin" class="tabcontent">
-            <h1>Jubin Nautiyal</h1>
-          </div>
-          <div id="justin" class="tabcontent">
-            <h1>justin Bieber</h1>
-          </div>
-          <div id="neha" class="tabcontent">
-            <h1>Neha Kakker</h1>
-          </div>
-          <div id="honey" class="tabcontent">
-            <h1>Honey Singht</h1>
-          </div>
-          <div class="buttons">
-            <button class="btn">PLAY</button>
-            <button onclick="disable()" class="btn" id="followBtn">
-              FOLLOW
-            </button>
-          </div>
+       
         </div>
-        <div class="popular-song">
-          <div class="h4">
-            <h4>Popular Song</h4>
-            <div class="btn_s">
-              <i class="bi bi-arrow-left-short"></i>
-              <i class="bi bi-arrow-right-short"></i>
+        <div class="home" id="content-1"></div>
+        <div class="mine" id="content-2">
+          
+          <div class="content">
+            <div id="" class="tabcontent">
+              <h1>Spotify Song List</h1>
+            </div>
+            <div id="arjit" class="tabcontent">
+              <h1>Arjit Singh</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+              <div class="menu-side">
+                <div class="menu-song">
+                  <ul>
+                    <li class="songItem">
+                      <span>01</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                    </li>
+                    <li class="songItem">
+                      <span>02</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                    </li>
+                    <li class="songItem">
+                      <span>03</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                    </li>
+                    <li class="songItem">
+                      <span>04</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                    </li>
+                    <li class="songItem">
+                      <span>05</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                    </li>
+                    <li class="songItem">
+                      <span>06</span>
+                      <img src="img/1.jpeg" alt="Alan" />
+                      <h5>
+                        On My Way
+                        <div class="subtitle">Alan Walker</div>
+                      </h5>
+                      <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="alan" class="tabcontent">
+              <h1>Alan Walker</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="atif" class="tabcontent">
+              <h1>Atif Aslam</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="guru" class="tabcontent">
+              <h1>Guru Randawa</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="dhvani" class="tabcontent">
+              <h1>Dhvani</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="diljit" class="tabcontent">
+              <h1>Diljit Dosanjh</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="jubin" class="tabcontent">
+              <h1>Jubin Nautiyal</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="justin" class="tabcontent">
+              <h1>justin Bieber</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="neha" class="tabcontent">
+              <h1>Neha Kakker</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
+            </div>
+            <div id="honey" class="tabcontent">
+              <h1>Honey Singht</h1>
+              <div class="buttons">
+                <button class="btn">PLAY</button>
+                <button onclick="disable()" class="btn" id="followBtn">
+                  FOLLOW
+                </button>
+              </div>
             </div>
           </div>
-          <div class="pop-song">
-            <ul>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+          <div id="discover" class="tabcontent">
+            <div class="popular-song">
+              <div class="h4">
+                <h4>Popular Song</h4>
+                <div class="btn_s">
+                  <i class="bi bi-arrow-left-short"></i>
+                  <i class="bi bi-arrow-right-short"></i>
                 </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+              </div>
+              <div class="pop-song">
+                <ul>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popular-artists">
+              <div class="h4">
+                <h4>Popular Artists</h4>
+                <div class="btn_s">
+                  <i class="bi bi-arrow-left-short"></i>
+                  <i class="bi bi-arrow-right-short"></i>
                 </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-              <li class="songItem">
-                <div class="img_play">
-                  <img src="img/1.jpeg" alt="alan" />
-                  <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
-                </div>
-                <h5>
-                  On My Way
-                  <br />
-                  <div class="subtitle">Alan Walker</div>
-                </h5>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="popular-artists">
-          <div class="h4">
-            <h4>Popular Artists</h4>
-            <div class="btn_s">
-              <i class="bi bi-arrow-left-short"></i>
-              <i class="bi bi-arrow-right-short"></i>
+              </div>
+              <div class="item">
+                <ul>
+                  <li>
+                    <img
+                      src="img/arjit.jpeg"
+                      alt="Arjit Singh"
+                      title="Arjit Singh"
+                      onclick="openLibrary('arjit')"
+                      class="tablink"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/alan.jpeg"
+                      alt="Alan Walker"
+                      title="Alan Walker"
+                      onclick="openLibrary('alan')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/atif.jpeg"
+                      alt="Atif Aslam"
+                      title="Atif Aslam"
+                      onclick="openLibrary('atif')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/guru.jpeg"
+                      alt="Guru RAndawa"
+                      title="Guru Randawa"
+                      onclick="openLibrary('guru')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/dhvani.jpeg"
+                      alt="Dhvani"
+                      title="Dhvani"
+                      onclick="openLibrary('dhvani')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/Diljit_Dosanjh.jpeg"
+                      alt="Diljit Dosanjh"
+                      title="Diljit Dosanjh"
+                      onclick="openLibrary('diljit')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/jubin Nautiyal.jpeg"
+                      alt="Jubin Nautiyal"
+                      title="Jubin Nautiyal"
+                      onclick="openLibrary('jubin')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/neha.jpeg"
+                      alt="Neha Kakker"
+                      title="Neha Kakker"
+                      onclick="openLibrary('neha')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/justin-bieber-lede.jpeg"
+                      alt="Justin Bieber"
+                      title="Justin Bieber"
+                      onclick="openLibrary('justin')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/honey.jpeg"
+                      alt="Honey Singh"
+                      title="Honey Singh"
+                      onclick="openLibrary('honey')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/akhil.jpeg"
+                      alt="Akhil"
+                      title="Akhil"
+                      onclick="openLibrary('akhil')"
+                    />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="item">
-            <ul>
-              <li>
-                <img
-                  src="img/arjit.jpeg"
-                  alt="Arjit Singh"
-                  title="Arjit Singh"
-                  onclick="artistsTitle('arjit')"
-                  id="defaultOpen"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/alan.jpeg"
-                  alt="Alan Walker"
-                  title="Alan Walker"
-                  onclick="artistsTitle('alan')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/atif.jpeg"
-                  alt="Atif Aslam"
-                  title="Atif Aslam"
-                  onclick="artistsTitle('atif')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/guru.jpeg"
-                  alt="Guru RAndawa"
-                  title="Guru Randawa"
-                  onclick="artistsTitle('guru')"
-                />
-              </li>
-              <li>
-                <img src="img/dhvani.jpeg" alt="Dhvani" title="Dhvani"  onclick="artistsTitle('dhvani')"/>
-              </li>
-              <li>
-                <img
-                  src="img/Diljit_Dosanjh.jpeg"
-                  alt="Diljit Dosanjh"
-                  title="Diljit Dosanjh"
-                  onclick="artistsTitle('diljit')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/jubin Nautiyal.jpeg"
-                  alt="Jubin Nautiyal"
-                  title="Jubin Nautiyal"
-                  onclick="artistsTitle('jubin')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/neha.jpeg"
-                  alt="Neha Kakker"
-                  title="Neha Kakker"
-                  onclick="artistsTitle('neha')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/justin-bieber-lede.jpeg"
-                  alt="Justin Bieber"
-                  title="Justin Bieber"
-                  onclick="artistsTitle('justin')"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/honey.jpeg"
-                  alt="Honey Singh"
-                  title="Honey Singh"
-                  onclick="artistsTitle('honey')"
-                />
-              </li>
-              <li>
-                <img src="img/akhil.jpeg" alt="Akhil" title="Akhil"  onclick="artistsTitle('akhil')"/>
-              </li>
-            </ul>
+          <div id="mYLIBRARY" class="tabcontent">
+            <div class="popular-song">
+              <div class="h4">
+                <h4>My Song</h4>
+                <div class="btn_s">
+                  <i class="bi bi-arrow-left-short"></i>
+                  <i class="bi bi-arrow-right-short"></i>
+                </div>
+              </div>
+              <div class="pop-song">
+                <ul>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                  <li class="songItem">
+                    <div class="img_play">
+                      <img src="img/1.jpeg" alt="alan" />
+                      <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                    </div>
+                    <h5>
+                      On My Way
+                      <br />
+                      <div class="subtitle">Alan Walker</div>
+                    </h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="popular-artists">
+              <div class="h4">
+                <h4>My Fav Artist </h4>
+                <div class="btn_s">
+                  <i class="bi bi-arrow-left-short"></i>
+                  <i class="bi bi-arrow-right-short"></i>
+                </div>
+              </div>
+              <div class="item">
+                <ul>
+                  <li>
+                    <img
+                      src="img/arjit.jpeg"
+                      alt="Arjit Singh"
+                      title="Arjit Singh"
+                      onclick="openLibrary('arjit')"
+                      class="tablink"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/alan.jpeg"
+                      alt="Alan Walker"
+                      title="Alan Walker"
+                      onclick="openLibrary('alan')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/atif.jpeg"
+                      alt="Atif Aslam"
+                      title="Atif Aslam"
+                      onclick="openLibrary('atif')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/guru.jpeg"
+                      alt="Guru RAndawa"
+                      title="Guru Randawa"
+                      onclick="openLibrary('guru')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/dhvani.jpeg"
+                      alt="Dhvani"
+                      title="Dhvani"
+                      onclick="openLibrary('dhvani')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/Diljit_Dosanjh.jpeg"
+                      alt="Diljit Dosanjh"
+                      title="Diljit Dosanjh"
+                      onclick="openLibrary('diljit')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/jubin Nautiyal.jpeg"
+                      alt="Jubin Nautiyal"
+                      title="Jubin Nautiyal"
+                      onclick="openLibrary('jubin')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/neha.jpeg"
+                      alt="Neha Kakker"
+                      title="Neha Kakker"
+                      onclick="openLibrary('neha')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/justin-bieber-lede.jpeg"
+                      alt="Justin Bieber"
+                      title="Justin Bieber"
+                      onclick="openLibrary('justin')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/honey.jpeg"
+                      alt="Honey Singh"
+                      title="Honey Singh"
+                      onclick="openLibrary('honey')"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="img/akhil.jpeg"
+                      alt="Akhil"
+                      title="Akhil"
+                      onclick="openLibrary('akhil')"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
+          <div id="radio" class="tabcontent">
+            <h1>In progress Radio</h1>
+          </div>
+          
+            </div>
       </div>
 
       <div class="master-play">
