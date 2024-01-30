@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .images-wrap {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1680px;
+    }
+    .images-frame {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .images-frame-block {
+      will-change: transform;
+      transform-style: preserve-3d;
+      transform: translateY(0px);
+    }
+    .images-frame-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .images-frame-block_1 {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 1;
+    }
+    .images-frame-block_2 {
+      position: absolute;
+      left: 560px;
+      top: 80px;
+      z-index: 1;
+    }
+    .images-frame-block_3 {
+      position: absolute;
+      left: 1247px;
+      top: 130px;
+      z-index: 1;
+    }
+    .images-frame-block_4 {
+      position: absolute;
+      right: 17px;
+      top: 0px;
+      z-index: 1;
+    }
+    .images-frame-block_5 {
+      position: absolute;
+      right: 0px;
+      top: 280px;
+    }
+    .images-frame-block_6 {
+      left: 25px;
+      position: absolute;
+      top: 448px;
+      z-index: 2;
+    }
+    .images-frame-block_7 {
+      position: absolute;
+      left: 178px;
+      top: 408px;
+      z-index: 2;
+    }
+    .images-frame-block_8 {
+      position: absolute;
+      left: 368px;
+      top: 460px;
+      z-index: 1;
+    }
+    .images-frame-block_9 {
+      position: absolute;
+      right: 16px;
+      top: 568px;
+      z-index: 1;
+    }
+    .images-frame-block_10 {
+      position: absolute;
+      left: 76px;
+      top: 816px;
+      z-index: 1;
+    }
+    .images-frame-block_11 {
+      position: absolute;
+      left: 285px;
+      top: 908px;
+      z-index: 1;
+    }
+    .images-frame-block_12 {
+      position: absolute;
+      left: 824px;
+      top: 884px;
+      z-index: 1;
+    }
+    .images-frame-block_12 img {
+      max-width: 193px;
+    }
+    .images-frame-block_13 {
+      position: absolute;
+      left: 1032px;
+      top: 960px;
+      z-index: 2;
+    }
+    .images-frame-block_14 {
+      position: absolute;
+      right: 56px;
+      top: 807px;
+      z-index: 2;
+    }
+    .images-frame-block_15 {
+      position: absolute;
+      left: 162px;
+      top: 1329px;
+      z-index: 1;
+    }
+    .images-frame-block_16 {
+      position: absolute;
+      left: 632px;
+      top: 1267px;
+      z-index: 2;
+    }
+    .images-frame-block_17 {
+      position: absolute;
+      right: 100px;
+      top: 1392px;
+      z-index: 2;
+    }
+    .images-frame {
+      padding-bottom: 400px;
+    }
+    @media only screen and (max-width: 1679px) and (min-width: 1440px) {
+      .images-frame {
+        padding-bottom: 850px;
+      }
+      .images-wrap {
+        max-width: 1440px;
+      }
+      .images-frame-block_2 {
+        left: 541px;
+      }
+      .images-frame-block_2 img {
+        max-width: 480px;
+      }
+      .images-frame-block_3 {
+        left: 1023px;
+      }
+      .images-frame-block_8 img {
+        max-width: 540px;
+      }
+      .images-frame-block_9 img {
+        max-width: 500px;
+      }
+      .images-frame-block_10 {
+        top: 808px;
+      }
+      .images-frame-block_11 {
+        top: 841px;
+      }
+      .images-frame-block_11 img {
+        max-width: 410px;
+      }
+      .images-frame-block_12 {
+        left: 718px;
+        top: 817px;
+      }
+      .images-frame-block_13 {
+        left: 928px;
+        top: 891px;
+      }
+      .images-frame-block_13 img {
+        max-width: 340px;
+      }
+      .images-frame-block_14 {
+        top: 765px;
+      }
+      .images-frame-block_15 {
+        top: 1195px;
+      }
+      .images-frame-block_15 img {
+        max-width: 400px;
+      }
+      .images-frame-block_16 {
+        left: 575px;
+        top: 1147px;
+      }
+      .images-frame-block_16 img {
+        max-width: 400px;
+      }
+      .images-frame-block_17 img {
+        max-width: 400px;
+      }
+      .images-frame-block_17 {
+        top: 1213px;
+      }
+    }
+    @media only screen and (max-width: 1439px) {
+      .images-frame {
+        padding-bottom: 500px;
+      }
+    }
+    @media only screen and (max-width: 1439px) and (min-width: 1200px) {
+      .images-wrap {
+        max-width: 1200px;
+      }
+      .images-frame-block img {
+        max-width: 100%;
+      }
+      .images-frame-block_1 {
+        width: 32%;
+      }
+      .images-frame-block_2 {
+        left: 32.5%;
+        top: 8%;
+        width: 39%;
+      }
+      .images-frame-block_3 {
+        left: 72%;
+        top: 17%;
+        width: 13%;
+      }
+      .images-frame-block_4 {
+        right: 1%;
+        width: 13%;
+      }
+      .images-frame-block_6 {
+        top: 60%;
+        left: 1%;
+        width: 11%;
+      }
+      .images-frame-block_7 {
+        top: 54%;
+        left: 13%;
+        width: 14%;
+      }
+      .images-frame-block_8 {
+        left: 28%;
+        top: 75%;
+        width: 35%;
+      }
+      .images-frame-block_9 {
+        top: 78%;
+        right: 0.5%;
+        width: 35.5%;
+      }
+      .images-frame-block_10 {
+        left: 5%;
+        top: 126%;
+        width: 14%;
+      }
+      .images-frame-block_11 {
+        left: 20%;
+        top: 129%;
+        width: 32%;
+      }
+      .images-frame-block_12 {
+        left: 53%;
+        top: 130%;
+        width: 17%;
+      }
+      .images-frame-block_13 {
+        left: inherit;
+        top: 133%;
+        right: 1%;
+        width: 28%;
+      }
+      .images-frame-block_14 {
+        right: 2%;
+        top: 110%;
+        width: 18%;
+      }
+      .images-frame-block_15 {
+        left: 11%;
+        top: 193%;
+        width: 28%;
+      }
+      .images-frame-block_16 {
+        left: 40%;
+        top: 201%;
+        width: 28%;
+      }
+      .images-frame-block_17 {
+        right: 2%;
+        top: 192%;
+        width: 28%;
+      }
+    }
+
+    @media only screen and (max-width: 1199px) {
+      .images-wrap {
+        max-width: 992px;
+      }
+      .images-frame-block img {
+        max-width: 100%;
+      }
+      .images-frame-block_1 {
+        width: 30%;
+      }
+      .images-frame-block_2 {
+        left: 30.5%;
+        top: 5%;
+        width: 34%;
+      }
+      .images-frame-block_3 {
+        left: 64.9%;
+        top: 10%;
+        width: 16%;
+      }
+      .images-frame-block_4 {
+        width: 17%;
+        right: 1.5%;
+      }
+      .images-frame-block_5 {
+        top: 35%;
+        width: 25%;
+      }
+      .images-frame-block_6 {
+        left: 1%;
+        top: 47%;
+        width: 13%;
+      }
+      .images-frame-block_7 {
+        top: 42%;
+        left: 14.5%;
+        width: 13%;
+      }
+      .images-frame-block_8 {
+        left: 28%;
+        top: 53%;
+        width: 35%;
+      }
+      .images-frame-block_9 {
+        top: 78%;
+        right: 0.5%;
+        width: 34.5%;
+      }
+      .images-frame-block_10 {
+        left: 5%;
+        top: 103%;
+        width: 14%;
+      }
+      .images-frame-block_11 {
+        left: 20%;
+        top: 97%;
+        width: 28%;
+      }
+      .images-frame-block_12 {
+        left: 48%;
+        top: 97%;
+        width: 17%;
+      }
+      .images-frame-block_13 {
+        left: inherit;
+        top: 120%;
+        right: 1%;
+        width: 33%;
+      }
+      .images-frame-block_14 {
+        right: 2%;
+        top: 110%;
+        width: 18%;
+      }
+      .images-frame-block_15 {
+        left: 2%;
+        top: 159%;
+        width: 30%;
+      }
+      .images-frame-block_16 {
+        left: 33%;
+        top: 149%;
+        width: 32%;
+      }
+      .images-frame-block_17 {
+        right: 2%;
+        top: 179%;
+        width: 32%;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .images-frame {
+        padding-bottom: 450px;
+      }
+      .images-wrap {
+        max-width: 768px;
+      }
+      .images-frame-block_2 {
+        top: 3%;
+      }
+      .images-frame-block_3 {
+        top: 8%;
+      }
+      .images-frame-block_6 {
+        top: 40%;
+      }
+      .images-frame-block_5 {
+        top: 30%;
+        width: 25%;
+      }
+      .images-frame-block_7 {
+        top: 36%;
+      }
+      .images-frame-block_8 {
+        top: 45%;
+      }
+      .images-frame-block_9 {
+        top: 65%;
+        width: 29.5%;
+      }
+      .images-frame-block_10 {
+        left: 3%;
+        top: 88%;
+      }
+      .images-frame-block_11 {
+        left: 18%;
+        top: 83%;
+        width: 33%;
+      }
+      .images-frame-block_12 {
+        left: 52%;
+        top: 83%;
+      }
+      .images-frame-block_13 {
+        top: 95%;
+        width: 29%;
+      }
+      .images-frame-block_14 {
+        right: 3%;
+        top: 75%;
+        width: 20%;
+      }
+      .images-frame-block_15 {
+        top: 136%;
+      }
+      .images-frame-block_16 {
+        top: 125%;
+      }
+      .images-frame-block_17 {
+        top: 138%;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .images-frame {
+        padding-bottom: 300px;
+      }
+      .images-wrap {
+        max-width: 575px;
+      }
+      .images-frame-block_2 {
+        top: 2%;
+      }
+      .images-frame-block_3 {
+        top: 6%;
+      }
+      .images-frame-block_6 {
+        top: 30%;
+      }
+      .images-frame-block_5 {
+        top: 22%;
+        width: 20%;
+      }
+      .images-frame-block_7 {
+        top: 21%;
+      }
+      .images-frame-block_8 {
+        top: 26%;
+      }
+      .images-frame-block_9 {
+        top: 37%;
+        width: 35.5%;
+      }
+      .images-frame-block_10 {
+        top: 52%;
+      }
+      .images-frame-block_11 {
+        top: 48%;
+      }
+      .images-frame-block_12 {
+        top: 53%;
+      }
+      .images-frame-block_13 {
+        top: 58%;
+      }
+      .images-frame-block_14 {
+        top: 50%;
+        width: 20%;
+      }
+      .images-frame-block_15 {
+        top: 79%;
+        width: 35%;
+      }
+      .images-frame-block_16 {
+        top: 80%;
+      }
+      .images-frame-block_17 {
+        top: 83%;
+      }
+    }
+
+    @media only screen and (max-width: 575px) {
+      .banner-row-sec .elementor-container {
+        min-height: 300px !important;
+      }
+      .images-frame {
+        padding-bottom: 300px;
+      }
+      .images-wrap {
+        max-width: 320px;
+      }
+      .images-frame-block_2 {
+        top: 3%;
+      }
+      .images-frame-block_3 {
+        top: 6%;
+      }
+      .images-frame-block_5 {
+        top: 13%;
+      }
+      .images-frame-block_6 {
+        top: 25%;
+      }
+      .images-frame-block_7 {
+        top: 23%;
+      }
+      .images-frame-block_8 {
+        top: 30%;
+      }
+      .images-frame-block_9 {
+        top: 27%;
+        width: 32.5%;
+      }
+      .images-frame-block_10 {
+        top: 55%;
+      }
+      .images-frame-block_11 {
+        top: 53%;
+      }
+      .images-frame-block_12 {
+        top: 48%;
+      }
+      .images-frame-block_13 {
+        top: 38%;
+      }
+      .images-frame-block_14 {
+        top: 50%;
+      }
+      .images-frame-block_15 {
+        top: 85%;
+      }
+      .images-frame-block_16 {
+        top: 82%;
+      }
+      .images-frame-block_17 {
+        top: 121%;
+      }
+      .images-frame-block_17 {
+        top: 68%;
+      }
+    }
+    @media only screen and (max-width: 320px) {
+      .images-frame {
+        padding-bottom: 300px;
+      }
+      .images-frame-block_2 {
+        top: 1%;
+      }
+      .images-frame-block_3 {
+        top: 5%;
+      }
+      .images-frame-block_10 {
+        top: 40%;
+      }
+      .images-frame-block_8 {
+        top: 26%;
+      }
+      .images-frame-block_9 {
+        width: 35.5%;
+      }
+      .images-frame-block_10 {
+        top: 53%;
+      }
+      .images-frame-block_11 {
+        top: 51%;
+      }
+      .images-frame-block_13 {
+        top: 49%;
+      }
+      .images-frame-block_15 {
+        top: 81%;
+      }
+      .images-frame-block_16 {
+        left: 38%;
+      }
+      .images-frame-block_17 {
+        top: 75%;
+        width: 28%;
+      }
+    }
+  </style>
+  <body>
+    <div class="images-wrap">
+      <div class="images-frame">
+        <div class="images-frame-block images-frame-block_1 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images1.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_2 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images2.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_3 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images3.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_4 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images4.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_5 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images5.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_6 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images6.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_7 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images7.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_8 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images8.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_9 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images9.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_10 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images10.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_11 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images11.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_12 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images12.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_13 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images13.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_14 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images14.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_15 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images15.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_16 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images16.png"
+            alt=""
+          />
+        </div>
+        <div class="images-frame-block images-frame-block_17 animation-block">
+          <img
+            src="http://www.impekable.com/wp-content/uploads/2024/01/banner-images17.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Check window width on page load
+        checkWindowSize();
+
+        // Check window width on window resize
+        $(window).resize(function () {
+          checkWindowSize();
+        });
+
+        function checkWindowSize() {
+          // Get the window width
+          var windowWidth = $(window).width();
+
+          // Check if the window width is below a certain threshold
+          if (windowWidth <= 991.98) {
+            $(document).ready(function () {
+              "use strict";
+
+              $(document).ready(function () {
+                $(window).bind("scroll", function (e) {
+                  parallaxScroll();
+                });
+                parallaxScroll();
+              });
+              function parallaxScroll() {
+                const scrolled = $(window).scrollTop();
+                const value = 64 - scrolled * 0.2 + "px";
+                $(".animation-block").css("transform", `translateY(${value})`);
+                // $('.img-1').css('top', (0 - (scrolled * .35)) + 'px');
+                // $('.img-2').css('top', (0 - (scrolled * .05)) + 'px');
+              }
+            });
+          } else {
+            $(document).ready(function () {
+              "use strict";
+
+              $(document).ready(function () {
+                $(window).bind("scroll", function (e) {
+                  parallaxScroll();
+                });
+                parallaxScroll();
+              });
+              function parallaxScroll() {
+                const scrolled = $(window).scrollTop();
+                const value = 64 - scrolled * 0.3 + "px";
+                $(".animation-block").css("transform", `translateY(${value})`);
+                // $('.img-1').css('top', (0 - (scrolled * .35)) + 'px');
+                // $('.img-2').css('top', (0 - (scrolled * .05)) + 'px');
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
