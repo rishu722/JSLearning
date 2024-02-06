@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      function that takes a number as a parameter and throws a custom 'Error' if
+      the number is negative
+    </h3>
+    <script>
+      function negative(num) {
+        let x = Math.sign(num);
+        if (x < 0) {
+          throw new Error("Number is negative");
+        }
+        return x;
+      }
+
+      try {
+        console.log(negative(-5));
+      } catch (err) {
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>

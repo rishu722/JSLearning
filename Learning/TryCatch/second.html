@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      function that accepts two numbers as parameters and throws a custom
+      'Error' if the second number is zero
+    </h3>
+    <script>
+      function add(num1, num2) {
+        try {
+          if (num2 == 0) {
+            throw new Error("Number is zero");
+          }
+          return num1 + num2;
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      try {
+        console.log(add(122, 34));
+        console.log(add(23.0, 0));
+      } catch (err) {
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>

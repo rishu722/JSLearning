@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function fetchData() {
+        const isSuccess = Math.random() < 0.5;
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        if (isSuccess) {
+          return { data: "Mock data" };
+        } else {
+          throw new Error("Failed to fetch data");
+        }
+      }
+
+      fetchData()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    </script>
+  </body>
+</html>

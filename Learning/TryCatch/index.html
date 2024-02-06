@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throw Catch</title>
+  </head>
+  <body>
+    <script>
+   
+
+      function learning(num) {
+        if (!Number.isInteger(num)) {
+          throw new Error("Please Enter Interger Value");
+        }
+        console.log("Number is Integer");
+      }
+
+      try {
+        learning(12);
+        learning(2.12);
+      } catch (error) {
+        console.log(error);
+      }
+
+      try {
+        setTimeout(() => {
+          console.log("Hello welcome to leaning try catch");
+        }, 1000);
+      } catch (err) {
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>

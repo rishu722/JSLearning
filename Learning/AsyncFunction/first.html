@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>async and await make promises easier to write"</h3>
+    <p>async makes a function return a Promise</p>
+    <p>await makes a function wait for a Promise</p>
+    <script>
+      async function delayedMessage(message, delay) {
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        console.log(message);
+      }
+      delayedMessage("Hello, world!", 2000);
+    </script>
+  </body>
+</html>
