@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      function delayedSum that takes two numbers a and b, and a delay delay. The
+      function should return the sum of a and b after waiting delay
+      milliseconds.
+    </h3>
+    <script>
+      function delayedSum(a, b, delay) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(a + b);
+          }, delay);
+        });
+      }
+
+      delayedSum(3, 4, 2000).then((result) => {
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>
