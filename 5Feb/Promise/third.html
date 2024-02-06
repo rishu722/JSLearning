@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Promise after fetching data from an API using fetch</h3>
+    <script>
+      async function fetchDataFromApi(url) {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+          throw error;
+        }
+      }
+      fetchDataFromApi("https://jsonplaceholder.typicode.com/todos/1")
+        .then((data) => {
+          console.log("Fetched data:", data);
+        })
+        .catch((err) => {
+          console.error("Error in example usage:", err);
+        });
+    </script>
+  </body>
+</html>

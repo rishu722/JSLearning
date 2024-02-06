@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>chains two Promises together</h3>
+    <script>
+      function firstPromise() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("First Promise resolved");
+          }, 2000);
+        });
+      }
+
+      function secondPromise(value) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(`${value}, then Second Promise resolved`);
+          }, 2000);
+        });
+      }
+
+      firstPromise()
+        .then((result) => secondPromise(result))
+        .then((finalResult) => {
+          console.log(finalResult);
+        });
+    </script>
+  </body>
+</html>
