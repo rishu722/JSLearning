@@ -29,6 +29,17 @@ const quizData = [
     ],
     correct: 2,
   },
+  {
+    question: "Which HTML tag is used to define a hyperlink?",
+    options: ["<link>", "<a>", "<h>", "<p>"],
+    correct: 0,
+  },
+  {
+    question:
+      "Which CSS property is used to change the background color of an element?",
+    options: ["color", "background-color", "background", "bgcolor"],
+    correct: 1,
+  },
 ];
 const quiz = document.querySelector("#quiz");
 const answerEle = document.querySelectorAll(".answer");
@@ -76,11 +87,22 @@ submitBtn.addEventListener("click", () => {
     deselectedAnswer();
     loadQuiz();
   } else {
-    quizData.innerHtml = ` 
-     <div class="result">
-     <h2>Your Score : ${score} / ${quizData.length} Correct answers</h2>
-     <p>Congratulations you have completed your test.</p>
-    </div>
+    let totalScore = Math.round(quizData.length / 2);
+    console.log(totalScore);
+    if (score >= totalScore) {
+      quiz.innerHTML = ` 
+      <div class="result">
+        <h2>Your Score : ${score} / ${quizData.length} Correct answers</h2>
+        <p>Congratulations you have  passed your test.</p>
+      </div>
     `;
+    } else {
+      quiz.innerHTML = ` 
+      <div class="result">
+        <h2>Your Score : ${score} / ${quizData.length} Correct answers</h2>
+        <p>Congratulations you have Failed your test.</p>
+      </div>
+    `;
+    }
   }
 });
