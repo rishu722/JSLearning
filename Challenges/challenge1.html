@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 1</title>
+  </head>
+  <body>
+    <p>
+      Mark and John are trying to compare their BMI (Body Mass Index), which is
+      calculated using the formula: BMI = mass / (height * height) (mass in kg
+      and height in meters)
+    </p>
+    Your task is to write some code to help them:
+    <ol>
+      <li>
+        Store Mark's and John's mass and height in variables called massMark,
+        heightMark, massJohn and heightJohn.
+      </li>
+      <li>
+        Calculate both their BMIs using the formula, and store the results in
+        two variables called BMIMark and BMIJohn.
+      </li>
+      <li>Log the value of BMIMark and BMIJohn to the console.</li>
+      <li>
+        BONUS: Create a boolean variable markHigherBMI containing information
+        about whether Mark has a higher BMI than John. Log it to the console too
+      </li>
+    </ol>
+    <script>
+      //step 1
+      const massMark = 78;
+      const heightMark = 1.69;
+      const massJohn = 92;
+      const heightJohn = 1.95;
+
+      //step 2
+      const BMIMark = massMark / (heightMark * heightMark);
+      const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+      //step 3
+      console.log(BMIMark, BMIJohn);
+
+      //step 4
+      const markHigherBMI = BMIMark > BMIJohn;
+      console.log(markHigherBMI);
+    </script>
+  </body>
+</html>
